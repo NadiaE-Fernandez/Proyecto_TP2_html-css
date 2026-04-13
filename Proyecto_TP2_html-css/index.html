@@ -10,15 +10,54 @@
 <body>
     <header>
         <nav>
-            <div class="logo">JujuyTurismo</div>
+            <div class="logo">Jujuy<span>Turismo</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="views/destinos.html">Destinos</a></li>
+                <li class="has-mega">
+                    <a href="views/destinos.html">Destinos</a>
+                    <div class="mega-menu">
+                        <div class="mega-content">
+                            <div class="column">
+                                <h3>Quebrada</h3>
+                                <a href="#">Purmamarca</a>
+                                <a href="#">Tilcara</a>
+                                <a href="#">Humahuaca</a>
+                                <a href="#">Iruya (Cerca)</a>
+                            </div>
+                            <div class="column">
+                                <h3>Puna y Altiplano</h3>
+                                <a href="#">Salinas Grandes</a>
+                                <a href="#">Abra Pampa</a> <a href="#">La Quiaca</a>
+                                <a href="#">Casabindo</a>
+                            </div>
+                            <div class="column">
+                                <h3>Valles y Yungas</h3>
+                                <a href="#">San Salvador</a>
+                                <a href="#">Termas de Reyes</a>
+                                <a href="#">Parque Calilegua</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="views/agencias.html">Agencias</a></li>
-                
+                <li><a href="#">Precios</a></li>
+
             </ul>
         </nav>
     </header>
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://v1.shared.video/jujuy-promo.mp4" type="video/mp4">
+            </video>
+        
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1 class="animate-up">Jujuy, Energía Viva</h1>
+                <p class="animate-up delay">Explora los colores del norte argentino y vive una experiencia única.</p>
+                <a href="#destinos" class="btn-hero animate-up delay-2">Descubrir Ahora</a>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>
