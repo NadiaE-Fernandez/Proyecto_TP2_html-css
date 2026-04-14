@@ -1,0 +1,53 @@
+.blog-page { padding-top: 100px; max-width: 1200px; margin: 0 auto; }
+
+/* --- GRID ESTILO REVISTA --- */
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.principal { grid-row: span 2; }
+
+/* --- AVATAR CSS --- */
+.avatar-css {
+    width: 50px;
+    height: 50px;
+    background: #f39c12;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.avatar-css::after {
+    content: "\f007"; /* Icono de usuario FontAwesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* --- SCROLL REVEAL (CSS Moderno) --- */
+@keyframes reveal {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+    view-timeline-name: --item;
+    view-timeline-axis: block;
+    animation-timeline: --item;
+    animation-name: reveal;
+    animation-range: entry 10% cover 30%;
+    animation-fill-mode: both;
+}

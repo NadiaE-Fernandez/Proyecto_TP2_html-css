@@ -4,7 +4,26 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif, Arial;
 }
+:root {
+    /* Tema Claro (Default) */
+    --color-primario: #f39c12; /* El naranja de Jujuy Turismo */
+    --bg-principal: #ffffff;
+    --texto-color: #333333;
+    --card-bg: #f9f9f9;
+}
 
+[data-theme="dark"] {
+    /* Tema Oscuro */
+    --bg-principal: #1a1a1a;
+    --texto-color: #f5f5f5;
+    --card-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-color);
+    transition: background 0.3s ease;
+}
 header {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
