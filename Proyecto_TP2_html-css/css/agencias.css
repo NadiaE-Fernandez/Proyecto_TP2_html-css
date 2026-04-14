@@ -1,0 +1,109 @@
+/* Espaciado para el header fijo */
+.agencias-page {
+    padding-top: 100px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.intro-agencias {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* --- GRID DE TARJETAS --- */
+.grid-agencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px 10%;
+    margin-bottom: 50px;
+}
+
+/* --- EFECTO FLIP 3D --- */
+.agencia-card {
+    height: 400px;
+    perspective: 1000px; /* Crea la profundidad */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.agencia-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara de atrás al girar */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.card-front {
+    background: white;
+}
+
+.card-front img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-back {
+    background: #f39c12; /* Naranja de tu logo */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* --- ESTRELLAS ANIMADAS --- */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.rating input { display: none; }
+
+.rating label {
+    color: #eee;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #f1c40f; /* Dorado */
+}
+
+.btn-agencia {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agencia:hover {
+    background: white;
+    color: #f39c12;
+}

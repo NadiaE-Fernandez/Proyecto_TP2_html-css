@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencias - Jujuy Turismo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/agencias.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Jujuy<span>Turismo</span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="agencias.html">Agencias</a></li>
+                <li><a href="#">Precios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="agencias-page">
+        <section class="intro-agencias">
+            <h1>Agencias Autorizadas</h1>
+            <p>Encuentra los mejores guías locales para tu próxima aventura en el Norte.</p>
+        </section>
+
+        <section class="grid-agencias">
+            <div class="agencia-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/abra_pampa.jpg" alt="Agencia Puna">
+                        <h3>Puna Adventura</h3>
+                        <p class="tag">Especialistas en Puna</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Puna Adventura</h3>
+                        <p>Excursiones exclusivas a Salinas Grandes y Laguna de Pozuelos.</p>
+                        
+                        <div class="rating-container">
+                            <p>Calificación:</p>
+                            <div class="rating">
+                                <input type="radio" name="r1" id="r1-5"><label for="r1-5">★</label>
+                                <input type="radio" name="r1" id="r1-4"><label for="r1-4">★</label>
+                                <input type="radio" name="r1" id="r1-3"><label for="r1-3">★</label>
+                                <input type="radio" name="r1" id="r1-2"><label for="r1-2">★</label>
+                                <input type="radio" name="r1" id="r1-1"><label for="r1-1">★</label>
+                            </div>
+                        </div>
+                        <button class="btn-agencia">Contactar ahora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agencia-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../img/purmamarca.jpg" alt="Agencia Quebrada">
+                        <h3>Eco Quebrada</h3>
+                        <p class="tag">Turismo Sustentable</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Eco Quebrada</h3>
+                        <p>Trekking por el Hornocal y cabalgatas en Purmamarca.</p>
+                        
+                        <div class="rating-container">
+                            <p>Calificación:</p>
+                            <div class="rating">
+                                <input type="radio" name="r2" id="r2-5"><label for="r2-5">★</label>
+                                <input type="radio" name="r2" id="r2-4"><label for="r2-4">★</label>
+                                <input type="radio" name="r2" id="r2-3"><label for="r2-3">★</label>
+                                <input type="radio" name="r2" id="r2-2"><label for="r2-2">★</label>
+                                <input type="radio" name="r2" id="r2-1"><label for="r2-1">★</label>
+                            </div>
+                        </div>
+                        <button class="btn-agencia">Contactar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Suscribite</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Seguinos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
