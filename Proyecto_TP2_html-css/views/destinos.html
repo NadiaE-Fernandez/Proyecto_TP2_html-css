@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Jujuy Turismo</title>
+    <!-- Vincula tu CSS principal y uno nuevo para los destinos -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/destinos.css">
+</head>
+<body>
+    <!-- Puedes reutilizar tu header aquí si lo separas en un componente -->
+    <header>
+        <nav>
+            <div class="logo">Jujuy<span>Turismo</span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="agencias.html">Agencias</a></li>
+                <li><a href="#">Precios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="destinos-page">
+        <section class="filtros-container">
+            <h2>Filtra tu Aventura</h2>
+            <div class="filtros">
+                <!-- Inputs de radio para el filtro -->
+                <input type="radio" id="todos" name="categoria" value="todos" checked>
+                <label for="todos">Todos</label>
+
+                <input type="radio" id="quebrada" name="categoria" value="quebrada">
+                <label for="quebrada">Quebrada</label>
+
+                <input type="radio" id="puna" name="categoria" value="puna">
+                <label for="puna">Puna</label>
+
+                <input type="radio" id="yungas" name="categoria" value="yungas">
+                <label for="yungas">Yungas</label>
+            </div>
+        </section>
+
+        <section class="galeria-masonry">
+            <!-- Los data-category deben coincidir con el value del input -->
+            <div class="galeria-item" data-category="quebrada">
+                <img src="../img/purmamarca.jpg" alt="Purmamarca">
+                <div class="item-overlay"><h3>Purmamarca</h3></div>
+            </div>
+            <div class="galeria-item" data-category="puna">
+                <img src="../img/salinas.jpeg" alt="Salinas Grandes con altura diferente">
+                <div class="item-overlay"><h3>Salinas Grandes</h3></div>
+            </div>
+            <div class="galeria-item" data-category="yungas">
+                <img src="../img/parque_calilegua.jpg" alt="Calilegua">
+                <div class="item-overlay"><h3>Parque Calilegua</h3></div>
+            </div>
+            <div class="galeria-item" data-category="quebrada">
+                <img src="../img/tilcara.jpg" alt="Tilcara">
+                <div class="item-overlay"><h3>Tilcara</h3></div>
+            </div>
+             <div class="galeria-item" data-category="quebrada">
+                <img src="../img/humahuaca.jpg" alt="Humahuaca">
+                <div class="item-overlay"><h3>Humahuaca</h3></div>
+            </div>
+            <div class="galeria-item" data-category="puna">
+                <img src="../img/serranias_hornocal.jpg" alt="Puna">
+                <div class="item-overlay"><h3>Serranías del Hornocal</h3></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
