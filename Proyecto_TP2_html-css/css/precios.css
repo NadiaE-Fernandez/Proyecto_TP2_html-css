@@ -1,0 +1,36 @@
+/* Contenedor principal para que no se pegue al header */
+.precios-page {
+    padding-top: 120px; /* Espacio para el header fijo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.tabla-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.tabla-comparativa {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-comparativa th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.tabla-comparativa td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
