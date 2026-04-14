@@ -96,3 +96,103 @@
     margin: 0;
     font-size: 1.4rem;
 }
+
+input[type="radio"] {
+    display: none; /* Oculta los círculos de radio */
+}
+
+.filtros-labels {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Ajustes Masonry --- */
+.item-grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-alto {
+    grid-row: span 2;
+}
+
+/* --- Estilos Tabla Responsiva --- */
+.tabla-wrapper {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabla-responsiva {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-responsiva th {
+    background: #f39c12;
+    color: white;
+    padding: 15px;
+}
+
+.tabla-responsiva td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Media Query para la tabla en móviles */
+@media screen and (max-width: 600px) {
+    .tabla-responsiva thead { display: none; }
+    .tabla-responsiva td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .tabla-responsiva td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #f39c12;
+    }
+}
+
+/* Contenedor de los botones para que estén centrados y con espacio */
+.filtros-labels {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para que en el celular se acomoden uno abajo del otro */
+}
+
+/* Estilo base del botón (el label) */
+.filtros-labels label {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: white;
+    color: #333;
+    border: 2px solid #f39c12; /* El naranja de tu logo */
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* --- EFECTO HOVER --- */
+/* Cuando pasas el mouse por encima */
+.filtros-labels label:hover {
+    background-color: #f39c12;
+    color: white;
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+}
+
+/* --- ESTADO ACTIVO (Seleccionado) --- */
+/* Esto cambia el color del botón cuando haces clic y queda marcado */
+.filtros input[type="radio"]:checked + label {
+    background-color: #f39c12;
+    color: white;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
