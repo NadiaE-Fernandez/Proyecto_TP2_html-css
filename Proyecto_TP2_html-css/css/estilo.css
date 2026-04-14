@@ -115,13 +115,14 @@ nav {
 
 .hero {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     overflow: hidden;
+    margin-top: 80;
 }
 
 .hero-video {
@@ -145,11 +146,11 @@ nav {
 .hero-text {
     z-index: 1;
     padding: 0 20px;
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 .hero-text h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -422,4 +423,22 @@ footer {
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+}
+.social-links {
+    display: flex;
+    gap: 20px; /* Espacio entre iconos */
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: white; /* Color inicial */
+    font-size: 1.5rem; /* Tamaño del icono */
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el mouse */
+.social-links a:hover {
+    color: #f39c12; /* El naranja que usas en el logo */
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
 }
