@@ -1,0 +1,158 @@
+/* --- LAYOUT CON GRID Y FLEX --- */
+.contacto-container {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding-bottom: 50px;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.info-sidebar {
+    background: #f39c12;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario-contacto {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- VALIDACIÓN EN TIEMPO REAL --- */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.grupo-input input, .grupo-input textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Borde verde si es válido, rojo si es inválido (y no está vacío) */
+.grupo-input input:focus:invalid {
+    border-color: #e74c3c;
+}
+
+.grupo-input input:focus:valid {
+    border-color: #2ecc71;
+}
+
+.msj-error {
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 5px;
+    display: none;
+}
+
+.grupo-input input:invalid:not(:placeholder-shown) + .msj-error {
+    display: block;
+}
+
+/* --- SPINNER CSS --- */
+.btn-enviar {
+    background: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+    display: none; /* Se activa con una clase o estado */
+    margin-left: 10px;
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
+
+.btn-enviar:active .spinner {
+    display: inline-block;
+}
+
+/* --- MODAL (Checkbox Hack) --- */
+.hidden-check { display: none; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.hidden-check:checked ~ .modal-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.modal-content i {
+    font-size: 4rem;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.btn-cerrar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #f39c12;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}

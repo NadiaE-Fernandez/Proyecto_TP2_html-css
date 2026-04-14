@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jujuy Turismo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Jujuy<span>Turismo</span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="agencias.html">Agencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-container">
+        <section class="contacto-grid">
+            <div class="info-sidebar">
+                <h2>¿Hablamos?</h2>
+                <p>Déjanos tu mensaje y te ayudamos a planificar tu viaje por la Quebrada o la Puna.</p>
+                <div class="item-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Salvador de Jujuy, Argentina</span>
+                </div>
+                <div class="item-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+54 388 1234567</span>
+                </div>
+            </div>
+
+            <form class="formulario-contacto" action="#" method="POST">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Nadia Pérez">
+                    <span class="msj-error">Por favor, ingresa tu nombre.</span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <span class="msj-error">Ingresa un correo válido.</span>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="mensaje">Tu consulta</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+
+                <div class="contenedor-boton">
+                    <button type="submit" class="btn-enviar">
+                        <span class="texto-btn">Enviar Mensaje</span>
+                        <div class="spinner"></div>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <input type="checkbox" id="modal-check" class="hidden-check">
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>¡Mensaje Enviado!</h2>
+            <p>Gracias por contactarte. Nos pondremos en contacto contigo a la brevedad.</p>
+            <label for="modal-check" class="btn-cerrar">Aceptar</label>
+        </div>
+    </div>
+</body>
+</html>
